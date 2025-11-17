@@ -3,6 +3,8 @@ using namespace std;
 
 #define PACKAGES 1
 #define XIO 1
+#define XTIMER 1
+
 #define XINPUT (XIO)
 #define XOUTPUT (XIO)
 #define IOSS_FALSE (!XIO)
@@ -212,6 +214,26 @@ namespace xoutput
     }
 }
 using namespace xoutput;
+#endif
+
+#if XTIMER
+namespace xtimer
+{
+    using namespace std::chrono;
+    high_resolution_clock::time_point start;
+    void tstart()
+    {
+        start = high_resolution_clock::now();
+    }
+    void tend()
+    {
+        auto end = high_resolution_clock::now();
+        auto dur = duration<double, milli>(end - start).count();
+        printf("%.3f ms\n", dur);
+        fflush(stdout);
+    }
+}
+using namespace xtimer;
 #endif
 
 int main()
