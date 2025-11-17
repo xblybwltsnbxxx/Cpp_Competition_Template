@@ -32,6 +32,10 @@ const ll LINF = 1e18;
 #define K pchar(' ')
 #define F(i, n) for (int i = 0; i < n; i++)
 #define ALL(a) a.begin(), a.end()
+#define xfind(a, n) binary_search(ALL(a), n)
+#define LF(a, n) lower_bound(ALL(a), n) - a.begin()
+#define RF(a, n) upper_bound(ALL(a), n) - a.begin() - 1
+#define xsort(a) sort(ALL(a))
 #endif
 
 #if XINPUT
