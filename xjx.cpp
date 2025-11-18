@@ -90,9 +90,7 @@ namespace xinput
         char ch = getchar();
         string ret;
         while (ch != EOF && isspace((unsigned char)ch))
-        {
             ch = getchar();
-        }
         while (ch != EOF && !isspace((unsigned char)ch))
         {
             ret += ch;
@@ -118,9 +116,7 @@ namespace xinput
     {
         vector<string> ret(n);
         for (int i = 0; i < n; i++)
-        {
             ret[i] = gs();
-        }
         return ret;
     }
 }
@@ -149,9 +145,7 @@ namespace xoutput
             x /= 10;
         }
         while (pch > ch)
-        {
             putchar(*--pch);
-        }
     }
     inline void pll(long long x)
     {
@@ -172,16 +166,12 @@ namespace xoutput
             x /= 10;
         }
         while (pch > ch)
-        {
             putchar(*--pch);
-        }
     }
     inline void ps(const string &s)
     {
         for (char ch : s)
-        {
             putchar(ch);
-        }
     }
     inline void pvi(const vector<int> &a)
     {
@@ -206,9 +196,7 @@ namespace xoutput
         for (size_t i = 0; i < a.size(); i++)
         {
             if (i > 0)
-            {
                 putchar(' ');
-            }
             ps(a[i]);
         }
     }
@@ -244,3 +232,4 @@ int main()
     cout.tie(nullptr);
 #endif
 }
+
