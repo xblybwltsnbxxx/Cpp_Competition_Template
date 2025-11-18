@@ -209,7 +209,7 @@ namespace xtimer
 {
     using namespace std::chrono;
     high_resolution_clock::time_point start;
-    void tstart()
+    void tbegin()
     {
         start = high_resolution_clock::now();
     }
@@ -232,4 +232,5 @@ int main()
     cout.tie(nullptr);
 #endif
 }
+
 
