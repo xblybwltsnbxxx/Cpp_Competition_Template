@@ -4,7 +4,7 @@ using namespace std;
 #define PACKAGES 1
 #define XIO 1
 #define XTIMER 1
-#define XHIGH 0
+#define XHIGH 1
 
 #define XINPUT (XIO)
 #define XOUTPUT (XIO)
@@ -226,6 +226,19 @@ namespace xhigh
     {
         for (auto tt : t)
             putchar(tt);
+    }
+    inline vector<char> itoh(int t)
+    {
+        vector<char> tt;
+        if(t==0)
+            tt.push_back('0');
+        while(t>0)
+        {
+            tt.push_back(t % 10 + '0');
+            t /= 10;
+        }
+        reverse(tt.begin(), tt.end());
+        return tt;
     }
     vector<char> operator+(const vector<char> &t, const vector<char> &tt)
     {
